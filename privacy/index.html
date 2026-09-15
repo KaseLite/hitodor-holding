@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hitodor Chat Privacy Policy</title>
+<style>
+  :root { --ink:#142236; --muted:#5F6E82; --rule:#E6EDF5; --bg:#F8FAFD; --accent:#1A73E8; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#E6EDF5; --muted:#8494A9; --rule:#1E2D42; --bg:#0C1726; --accent:#8AB4F8; } }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  h1 { font-size: 1.9rem; line-height:1.2; margin:0 0 .25rem; text-wrap:balance; }
+  h2 { font-size: 1.15rem; margin: 2.2rem 0 .5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+  p, li { color: var(--ink); } .muted { color: var(--muted); font-size: .9rem; }
+  a { color: var(--accent); } ul { padding-left: 1.2rem; } li { margin: .3rem 0; }
+</style>
+</head>
+<body>
+<main>
+<p class="muted"><a href="/">Hitodor Chat</a></p>
+<h1>Hitodor Chat Privacy Policy</h1>
+<p class="muted">Effective 15 September 2026 · applies to the Hitodor Chat apps for Android and iOS</p>
+
+<p>Hitodor Chat is a private messenger. It is built so that we do not need to know who you are, who you talk to, or what you say. This policy explains what little data exists, where it lives, and how long it is kept.</p>
+
+<h2>Who is responsible</h2>
+<p>Hitodor, Munich, Germany ("we"). Contact, including for data-subject requests: <a href="mailto:hitodorprivacy@outlook.com">hitodorprivacy@outlook.com</a>.</p>
+
+<h2>No account, no phone number, no email</h2>
+<p>You do not register with us. Your identity is a cryptographic key created and kept on your device. We never ask for your name, phone number, email address or contact list, and Hitodor Chat never uploads your contacts.</p>
+
+<h2>Your messages and media</h2>
+<ul>
+  <li>Messages, photos, videos, voice notes and Circle (group) conversations are end-to-end encrypted on your device. Only the people you are talking to can read them. We cannot.</li>
+  <li>Our relay servers store encrypted envelopes only until they are delivered, and for no longer than 30 days. Encrypted attachments expire after at most 30 days.</li>
+  <li>Photo and video location metadata is removed on your device before anything is encrypted and sent.</li>
+</ul>
+
+<h2>Contacts and invitations</h2>
+<ul>
+  <li>A contact is added only when an invitation is accepted, or when you approve a request made from your card. No server receives or reconstructs your contact list or your social graph.</li>
+  <li>Our invitation service stores an encrypted invitation, its signed offer, a use count and its expiry. It is deleted when the invitation expires (at most 7 days) or is revoked. It never stores who received or accepted it.</li>
+  <li>If you publish a card or handle, the card you choose to publish is public so that people can send you a request.</li>
+</ul>
+
+<h2>Network privacy</h2>
+<p>The app reaches our services through Oblivious HTTP (OHTTP), which encrypts each request so that the relay forwarding it cannot read it. During this alpha, that relay and our services are operated by the same organisation, so we do not claim that no single operator could see both your network address and your requests. Mailboxes on our relay are not linked to any account, name or phone number.</p>
+
+<h2>Notifications</h2>
+<p>To wake the app when something arrives, we use Apple Push Notification service on iOS, and on Android a UnifiedPush distributor app that you choose and install (Hitodor Chat contains no Google Firebase code). The push service gives the app a push address or token, which we store so a wake-up can be delivered. A push contains only an app identifier, an opaque wake token and a collapse identifier. It never contains message content, sender names or who is writing to you.</p>
+
+<h2>What we do not do</h2>
+<ul>
+  <li>No analytics, advertising, advertising identifiers, trackers or crash-reporting services in the app.</li>
+  <li>No selling or sharing of personal data.</li>
+  <li>No reading, scanning or profiling of your conversations. We have no ability to do so.</li>
+</ul>
+
+<h2>Operational data on our servers</h2>
+<p>To keep the service running and protect it from abuse, our servers count events in aggregate (for example, how many messages were relayed in an hour). These counters never contain mailbox identifiers, invitation identifiers, key fingerprints, message content or per-conversation data.</p>
+
+<h2>Adults only</h2>
+<p>Hitodor Chat is for people aged 18 and over. When you first open the app you confirm that you are an adult; that confirmation is stored on your device only and is not sent to us.</p>
+
+<h2>Data on your device, and deletion</h2>
+<p>Your keys, conversations and media are stored on your device, protected by your device's security. Deleting the app deletes them. Anything left on our servers expires automatically as described above. Backups of keys are made only if you explicitly create one yourself.</p>
+
+<h2>Legal basis and your rights (EU/EEA)</h2>
+<p>We process the limited data above to provide the service you ask for (Article 6(1)(b) GDPR) and to keep it secure (Article 6(1)(f) GDPR). You have the right to access, rectify, erase, restrict or object to processing, and to data portability. Because we hold no account and cannot link server data to you, we may be unable to identify data relating to you; contact us and we will help where we can. You may also complain to your data protection supervisory authority.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be published here with a new effective date.</p>
+</main>
+</body>
+</html>

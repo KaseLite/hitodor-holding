@@ -1,92 +1,61 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hitochat</title>
-    <meta name="robots" content="noindex" />
-    <meta name="description" content="Hitochat is coming." />
-    <!--
-      The holding page for hitodor.app and hitodor.com, 4 September 2026.
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hitodor Chat</title>
+<meta name="description" content="Private messaging where trust belongs to people, not the platform.">
+<style>
+  :root { --ink:#142236; --muted:#5F6E82; --rule:#E6EDF5; --bg:#F8FAFD; --card:#FFFFFF; --accent:#1A73E8; --accent-ink:#FFFFFF; --soft:#EEF4FE; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#E6EDF5; --muted:#8494A9; --rule:#1E2D42; --bg:#0C1726; --card:#142236; --accent:#8AB4F8; --accent-ink:#08203F; --soft:#103F80; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; }
+  main { max-width: 44rem; margin: 0 auto; padding: 4rem 1.25rem 3rem; }
+  .mark { font-weight: 700; letter-spacing: .02em; color: var(--accent); font-size: 1rem; }
+  h1 { font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.12; margin: .6rem 0 1rem; text-wrap: balance; }
+  .lede { font-size: 1.15rem; color: var(--muted); max-width: 36rem; margin: 0 0 2.5rem; }
+  ul.facts { list-style: none; padding: 0; margin: 0 0 2.5rem; display: grid; gap: .7rem; }
+  ul.facts li { padding: .85rem 1rem; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; }
+  section.alpha { background: var(--soft); border-radius: 14px; padding: 1.4rem 1.3rem; margin: 0 0 2.5rem; }
+  section.alpha h2 { margin: 0 0 .4rem; font-size: 1.2rem; }
+  section.alpha p { margin: .4rem 0; }
+  .btns { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+  a.btn { display: inline-block; padding: .65rem 1.05rem; border-radius: 999px; text-decoration: none; font-weight: 600; border: 1px solid var(--accent); color: var(--accent); }
+  a.btn.primary { background: var(--accent); color: var(--accent-ink); }
+  a.btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+  .muted { color: var(--muted); font-size: .92rem; }
+  footer { border-top: 1px solid var(--rule); margin-top: 2rem; padding-top: 1.2rem; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark">Hitodor Chat</div>
+  <h1>Private messaging where trust belongs to people, not the platform.</h1>
+  <p class="lede">Your contacts are people you choose. Someone joins your conversations only by accepting your invitation, or by a request from your card that you approve.</p>
 
-      Hitodor's backend was shut down on this date — Supabase, Firebase and the
-      hito1 box all went with it. Every A record on both domains pointed at
-      that box, so without this page they would resolve to a dead address.
+  <ul class="facts">
+    <li>Messages, photos, video and voice notes are end-to-end encrypted.</li>
+    <li>Circles for group conversations.</li>
+    <li>No phone number or email needed to start. Your identity lives on your device.</li>
+    <li>No ads, no analytics, no tracking.</li>
+    <li>Forwarding needs the sender's approval, and received messages can't be copied or shared out of the app.</li>
+  </ul>
 
-      **It is hosted on GitHub Pages, deliberately, and not on a server.**
-      The whole point of the shutdown was to stop running services; putting a
-      holding page on a VM would have kept one alive to say that none were
-      running. Pages costs nothing, needs no maintenance, and cannot fail in a
-      way that pages somebody at 2am.
+  <section class="alpha">
+    <h2>Now in alpha</h2>
+    <p>Android first. Join the tester group with the Google account on your phone, then open the Play test.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://groups.google.com/g/hitodor">Join the tester group</a>
+      <a class="btn" href="https://play.google.com/apps/testing/app.hitochat.com">Open the Android test</a>
+    </div>
+    <p class="muted">iPhone through TestFlight follows soon. For adults aged 18 and over.</p>
+  </section>
 
-      The palette and type are lifted from the old beta page so the domain
-      still looks like itself.
-    -->
-    <style>
-      :root {
-        --bg: #faf8f6;
-        --text: #201e1d;
-        --secondary: #4a453f;
-        --muted: #605d5d;
-        --accent: #1a5c39;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 40px 24px;
-        background: var(--bg);
-        color: var(--text);
-        font: 400 16px/1.6 "Archivo", -apple-system, BlinkMacSystemFont,
-          "Segoe UI", Roboto, sans-serif;
-      }
-      main { max-width: 380px; }
-      .lockup {
-        display: flex; align-items: center; gap: 8px; margin-bottom: 40px;
-      }
-      .stone {
-        width: 11px; height: 11px; border-radius: 999px; background: var(--accent);
-      }
-      .wordmark {
-        font-size: 21px; font-weight: 600; letter-spacing: -0.035em;
-      }
-      h1 {
-        font-size: 27px; line-height: 1.25; font-weight: 600;
-        letter-spacing: -0.02em; margin: 0 0 16px;
-      }
-      p { margin: 0 0 14px; color: var(--secondary); }
-      .muted { color: var(--muted); font-size: 14px; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <div class="lockup">
-        <span class="stone"></span>
-        <span class="wordmark">hitochat</span>
-      </div>
-
-      <h1>Hitochat is coming.</h1>
-
-      <p>
-        Something new is being built here.
-      </p>
-
-      <!-- Worded to be true from the moment it is published. The page goes up
-           and DNS moves BEFORE the servers are destroyed, so a sentence in the
-           completed past — "the data has been deleted" — would have been false
-           for the window in between. -->
-      <p class="muted">
-        Hitodor, the location-locked messaging beta that used to live at this
-        address, has closed. Its servers are being shut down and every account
-        and everything in it goes with them.
-      </p>
-
-      <p class="muted">
-        Thank you to everybody who walked somewhere to open a message.
-      </p>
-    </main>
-  </body>
+  <footer>
+    <p class="muted"><a href="/privacy/">Privacy</a> · Hitodor · Munich, Germany · <a href="mailto:hitodorprivacy@outlook.com">hitodorprivacy@outlook.com</a></p>
+    <p class="muted">Looking for the old Hitodor location beta? It has closed, and its accounts and everything in them are being deleted.</p>
+  </footer>
+</main>
+</body>
 </html>
